@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+
 .App {
   text-align: center;
 }
@@ -15,14 +17,17 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-family: 'Shrikhand', cursive;
+  font-weight: 100;
+}
+
+.App-title > span {
+  color: white;
+  display: inline;
+  padding: 0 .15em;
+  background: rgba(255,159,252,.8);
 }
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
