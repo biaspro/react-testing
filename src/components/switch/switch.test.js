@@ -14,8 +14,6 @@ import Switch from "./switch";
 
  */
 
-
-
 test("hey", () => {
   //arrange
   const container = document.createElement("div");
