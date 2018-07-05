@@ -1,7 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Switch from "../switch/switch";
 
 class Toggle extends React.Component {
+  static propTypes = {
+    onToggle: PropTypes.func.required
+  };
+
   state = { on: false };
   toggle = () =>
     this.setState(
