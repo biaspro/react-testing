@@ -1,9 +1,15 @@
 import "./switch.styles.css";
+import PropTypes from "prop-types";
 import React from "react";
 
 const noop = () => {};
 
 class Switch extends React.Component {
+  static propTypes = {
+    on: PropTypes.bool,
+    onClick: PropTypes.func
+  };
+
   render() {
     const { on, "aria-label": ariaLabel, onClick, ...props } = this.props;
     const btnClassName = [

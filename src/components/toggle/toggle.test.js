@@ -5,7 +5,7 @@ import Switch from "../switch/switch";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 configure({ adapter: new Adapter() });
 
 /*
@@ -66,10 +66,10 @@ describe("Toggle", () => {
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it("Calls onToggle when clicked", () => {
+  it("Toggle on state swaps when onclick called", () => {
     // arrange
     const onToggle = jest.fn();
-    const toggle = mount(<Toggle onToggle={onToggle} />);
+    const toggle = shallow(<Toggle onToggle={onToggle} />);
     const switchComponent = toggle.find(Switch);
 
     // assert
